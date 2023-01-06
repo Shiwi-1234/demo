@@ -1,0 +1,35 @@
+<center><h1 style="color:rebeccapurple;">Edit Task</h1></center>
+
+<%= form_with scope: :task,url: todolists_path(@task), local: true do  |form| %>
+ 	<p>
+ 	<%=form.label :Name  %><br>
+	<%=form.text_field :name %>
+ 	</p>
+
+ 	<p>
+ 	<%=form.label :Email  %><br>
+	<%=form.text_field :email %>
+ 	</p>
+
+ 	<p>
+ 	<%=form.label :Task  %><br>
+	<%=form.text_field :task %>
+ 	</p>
+
+ 	<p>
+ 	<%=form.label :task_time %><br>
+	<%=form.text_field :task_time %>
+ 	</p>
+
+ 	<p>
+ 	<%=form.label :task_date %><br>
+	<%=form.text_field :task_date%> 	
+	</p>
+
+
+	<p>
+		<%= form.submit %>
+	</p>
+	 <%= link_to 'back', todolists_path %>
+ 
+ <%end%>

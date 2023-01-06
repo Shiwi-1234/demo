@@ -1,0 +1,41 @@
+<h1 style="color:purple;">New Task</h1>
+
+<%= form_with scope: :task,url: todolists_path, local: true do  |form| %>
+ 	<p>
+ 	<%=form.label :Name  %><br>
+	<%=form.text_field :name %>
+ 	</p>
+
+ 	<p>
+ 	<%=form.label :Email  %><br>
+	<%=form.text_field :email %>
+ 	</p>
+
+ 	<p>
+ 	<%=form.label :Task  %><br>
+	<%=form.text_field :task %>
+ 	</p>
+
+ 	<p>
+ 	<%=form.label :task_time %><br>
+	<%=form.text_field :task_time %>
+ 	</p>
+
+ 	<p>
+ 	<%=form.label :task_date %><br>
+	<%=form.text_field :task_date%> 	
+	</p>
+
+ 	<p>
+ 	<%=form.label :image %><br>
+	<%=form.file_field :image%> 	
+	</p>
+
+
+
+	<p>
+		<%= form.submit %>
+	</p>
+ <%= link_to 'back', root_path %>
+  <%= link_to 'All todos', todolists_path %>
+ <%end%>
